@@ -1,0 +1,104 @@
+header {
+	background-color: #BBBBBB;
+	display: flex;
+	align-items: center;
+}
+header img{
+	display: inline-block;
+	vertical-align: middle;
+	width: 10%;
+}
+nav {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 50%;
+}
+
+nav li{
+	display: inline;
+	margin: 0 0 0 15px;
+}
+nav a{
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 1.5vw;
+	text-decoration: none;
+}
+nav a:hover{
+	color: #C78C19;
+	text-decoration: underline;
+}
+main {
+	width: 80%;
+	margin: 0 auto;
+}
+form{
+	margin: 40px 0;
+}
+form label, form p{
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+form input{
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 30%;
+}
+.input-padron {
+	display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+#checkbox {
+    margin: 20px 0;
+}
+#checkbox input, label{
+	display: inline-block
+}
+#sel_contacto input{
+	vertical-align: baseline;
+	margin: 40px 0 -20px 0px;
+}
+#sel_contacto label{
+	margin: 40px;
+}
+footer {
+	text-align: center;
+	background: url(imagenes/bg.jpg);
+	padding: 40px;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+    background: orange;
+    border:none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor:pointer;
+}
+.enviar:hover {
+    background: darkorange;
+    transform: scale(1.2);
+}
+table {
+    margin: 40px 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
