@@ -1,0 +1,177 @@
+/*
+Para layout responsivo: https://www.w3schools.com/html/html_responsive.asp
+*/
+* {
+	box-sizing: border-box;
+}  
+body {
+	background-color: #F3F5FC;
+	display: flex; /*Para que secciones principales se alineen horizontalmente*/
+	align-items: center; 	/* Me quedaré con la duda de porque no se alinean bien horizontalmente el header, footer y main*/
+}
+header{
+	float: left;
+	width: 15%;
+	min-height: 800px; /* por si la ventana se aplasta como sandwich*/
+}
+footer{
+	float: left;
+	width: 30%;
+	height: 95vh; /* este grande*/
+	min-height: 800px; /* por si la ventana se aplasta como sandwich*/
+}
+main{
+	float: left;
+	width: 55%;
+	height: 95vh;
+	min-height: 800px;
+}
+header{
+	/* Recuerda checar bien sintaxis, margin entre números no lleva comas*/
+	padding: 2.5vh 0 0 2.5vw; /* que logo no esté en la esquina*/
+	height: 90vh;
+}
+.caja_out{
+	background-color: white;
+	width: auto;
+	margin: 2% 2%; /* efecto similar al margin en header y en main*/
+	height: 100%;
+
+	
+	/* display flex causa desborde, pero ayuda a centrar verticalmente*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border-style: hidden;
+	border-radius: 20px;
+}
+.caja_out-vacio{
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+	flex-direction: column; /* Importante para mostrar contenido en pilar y no en fila */
+	margin: 0 2%;
+}
+.caja_out-vacio img{ 
+	max-width: 100%; /* Para que imagen no se desborde */
+}
+.caja_out-vacio p{
+	text-align: center; 
+	margin: 5px;
+}
+
+main {
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+	flex-direction: column; 
+	padding: 2% 2% 0 ;
+}
+.botones {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 10%;
+}
+button {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 20px;
+	margin: 5%;
+	/* Se veían medio raros los botones solo ajustándolos de forma responsiva*/
+	width: 300px;
+	max-width: 40%; 
+	height: 55px;
+	max-height: 100%;
+	transition: filter 0.3s ease;
+}
+.boton-desencriptar {
+	background-color: #D8DFE8;
+	color: #0A3871;
+}
+.boton-encriptar {
+	background-color: #0A3871;
+	color: white;
+}
+
+.estoy-chiquito {
+	color: #495057;
+	font-size: 1em; 
+	display: flex;
+	justify-content: start; /*ajuste sobre eje principal ->  horizontal por flex dirección ser row (default)*/
+	align-items: center;
+	width: 100%;
+}
+.estoy-chiquito img{
+	margin: 0px 3px; /* Solo margen en la derecha*/
+}
+textarea {
+	resize: none;
+}
+.in {
+	flex-grow: 1;
+	border-style: hidden;
+	outline: none; /*borde al hacer focus al input*/
+	background-color: transparent;
+	width: 100%;
+	min-height: 80%;
+	font-size: xx-large;
+	vertical-align: text-top;
+	color: #356EA9;
+}
+::placeholder{
+	color: #609ED4;
+}
+
+.caja_out-lleno{
+	display: none;
+	align-items: center; 
+	justify-content: center; 
+	flex-direction: column;
+	height: 90%;
+	width: 90%;
+}
+.boton-copiar {
+	background-color: white;
+	color: #0A3871;
+	max-width: 90%; /*6 am, ya no carburo bien */
+}
+
+/* Al hacer foco */
+button:hover {
+    filter: brightness(1.2); /* Aumenta el brillo en un 20% */
+    outline: none; /* Elimina el borde de foco predeterminado */
+}
+
+/* Al hacer clic */
+button:active {
+    filter: brightness(0.8); /* Disminuye el brillo en un 20% */
+}
+
+.out {
+	
+	flex-grow: 1;
+	border-style: hidden;
+	outline: none; /*borde al hacer focus al input*/
+	background-color: transparent;
+	width: 100%;
+	height: 80%;
+	font-size: x-large;
+	vertical-align: text-top;
+	color: black;
+	max-width: 100%;
+}
+@media screen and (max-width: 800px) {
+	header, footer, main{
+	  width: 100%; /* Efecto de que se acomode todo en pilar*/
+	}
+	header {
+		height: 100%; /* No es necesario que logo ocupe todo el espacio de antes, antes solo se le puso mucho espacio vertical para que logo estuviera alineado en la parte superior izquierda*/
+		min-height: 0; /* de nuevo, igual que el comentario anterior */
+	}
+	body {
+		display:block; /* Si no se cambia, no funciona el efecto*/
+	}
+}

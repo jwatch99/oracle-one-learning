@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Escribiendo '!' y luego Enter se genera una plantilla html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 1</title>
+	<link rel="stylesheet" href="src/normalize.css">
+    <!-- Importante incluir primero el normalize css ya que estilos personalizados pueden ser invisibles si se pone después por que serán sobrescritos -->
+	<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <header>
+        <img src="src/img/alura_logo.png" alt="Logo Alura"> 
+    </header>
+    <main>
+        <textarea class="in" placeholder="Ingrese el texto aquí"></textarea>
+        <div class="estoy-chiquito">
+            <img src="src/img/admiración.png">
+            <p>Sólo letras minúsculas y sin acentos.</p>
+        </div>
+        <div class="botones">
+            <button type="submit" class="boton-encriptar">Encriptar</button>
+            <button type="submit" class="boton-desencriptar">Desencriptar</button>
+        </div>
+    </main>
+    <footer>
+        <div class="caja_out">
+            <div class="caja_out-vacio">
+                <img src="src/img/muneco.png">
+                <!-- Resaltar texto-->
+                <p><strong style="font-size: 1.2em;">Ningún mensaje fue encontrado</strong></p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="caja_out-lleno">
+                <textarea readonly class="out"></textarea>
+                <button type="copiar" class="boton-copiar">Copiar</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
