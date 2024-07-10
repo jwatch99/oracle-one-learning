@@ -11,3 +11,7 @@ Aspectos importantes del aprendizaje obtenido al realizar el challenge.
 - **Trello:** Es un board intuitivo utilizado para organizar distintas tareas que pueden ser personalizadas a gran escala. 
 - **Figma**: Entorno de trabajo para desarrollo de interfaces digitales
 - [**Extension Live Server para VSCode**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer): Permite correr un servidor local.
+
+# Conclusión
+
+Intenté comentar la mayoría del código para entenderlo en caso de que quiera volverlo a checar, pero la mayoría tendrá que ser repasado un par de veces más.
