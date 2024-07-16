@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Portafolio</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <!-- Usando FontAwesome -->
+    <script src="https://kit.fontawesome.com/4046a61b0e.js" crossorigin="anonymous"></script>
+    <!-- Usando Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <script src="src/script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#education">Formación Académica</a></li>
+                <li><a href="#portfolio">Portafolio</a></li>
+                <li><a href="#experience">Experiencia Profesional</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="introduction">
+        <div class="intro-text">
+            <p><h1>Bienvenido a mi portafolio.</h1> Aquí encontrarás información sobre mis habilidades, formación y proyectos.</p>
+            <div class="contact-links">
+                <a href="mailto:tu_correo@example.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/tu-perfil"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/tu-usuario"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="intro-photo">
+            <img src="src/img/foto.jpg" alt="Foto de presentación">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Sobre mí</h2>
+        <p>"Soy Ingeniero en Biotecnología y apasionado por la informática, por eso estoy cursando mi Maestría en Dirección e Ingeniería de Software. Codifico desde adolescente."</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill"><i class="fab fa-python"></i><span> Python</span></div>
+            <div class="skill"><i class="fab fa-html5"></i><span> HTML</span></div>
+            <div class="skill"><i class="fab fa-css3-alt"></i><span> CSS</span></div>
+            <div class="skill"><i class="fa-brands fa-js"></i><span> JS</span></div>
+            <div class="skill"><i class="fa-brands fa-react"></i><span> React</span></div>
+            <div class="skill"><span><img src="src/img/c_logo.svg"> C</span></div>
+            <div class="skill"><span><img src="src/img/c++_logo.svg"> C++</span></div>
+        </div>
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <div class="hobbies-container">
+            <div class="hobby"><i class="fas fa-music"></i><span> Piano</span>
+            </div>
+            <div class="hobby"><i class="fas fa-dumbbell"></i><span> Gimnasio</span></div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Formación Académica</h2>
+        <div class="education-container">
+            <div class="education-item">
+                <p><img src="./src/img/prepatec_logo.jpg"></p>
+                <p><strong><span>ITESM Campus Irapuato</span></strong></p>
+                <p><span>Educación Media Superior</span></p>
+            </div>
+            <div class="education-item">
+                <p><img src="./src/img/UAQ_logo.jpg"></p>
+                <p><strong><span>Universidad Autónoma de Querétaro</span></strong></p>
+                <p><span>Ingeniería en Biotecnología</span></p>
+            </div>
+            
+            <div class="education-item">
+                <p><img src="./src/img/alura_logo.jpg"></p>
+                <p><strong><span>alura LATAM</span></strong></p>
+                <p><span>Formación en UX Design</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portafolio</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item">
+                <div class="display_container">
+                    <div class="slide portafolio">
+                        <div class="slide_text">
+                            <h3>Encriptador de texto</h3>
+                            <p>Encriptador de texto simple con JS y página estilizada con HTML y CSS básico</p>
+                            <p>
+                                <button onclick="window.location.href='https://github.com/jwatch99/oracle-one-learning/tree/main/Challenges/challenge-one-logica'" class="button-6" role="button">Repo</button>
+                                <button onclick="window.location.href='../challenge-one-logica/index.html'" class="button-6 alt" role="button">Demo</button>
+                            </p>
+                        </div>
+                        <img class="slide_img" src="src/img/portafolio_1.png">
+                    </div>
+                    <div class="display_button_container">
+                        <div class="display_left" onclick="presentation(-1,'portafolio', true)">&#10094;</div>
+                        <div class="display_right" onclick="presentation(1,'portafolio', true)">&#10095;</div>
+                        <span  onclick="presentation(0,'portafolio', false)"><i class="fa-regular fa-circle portafolio"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experiencia</h2>
+        <div class="experience-container">
+            <div class="experience-item">
+                <figure>
+                    <img src="src/img/experience_1.jpg" alt="Logos de compañías de servicio al cliente">
+                    <figcaption> 
+                        <h3>Servicio al cliente - KFC, Teleperformance, 5CA, Allianz Partners Mexico</h3>
+                        <p><strong>+2 años de experiencia de 2019 a 2024</strong></p>
+                        <p>Con un dominio fluido del inglés y en español, me comuniqué de manera efectiva con una amplia gama de clientes, atendiendo consultas, resolviendo problemas y brindando información sobre productos de manera clara y concisa. Obtuve bonos de desempeño consistentemente. Era conocido por mantener una buena ética de trabajo como ser un trabajador puntual, ser eficiente en mi tiempo promedio de atención en las llamadas, autodisciplinado y tener iniciativa.</p></figcaption>
+                </figure>
+            </div>
+            <div class="experience-item">
+                
+                <figure style="--c:#fff5">
+                    <img src="src/img/da-logo.jpg" alt="Logos de Data Annotation Tech">
+                    <figcaption> 
+                        <h3>Consultor de programación independiente en DataAnnotationTech</h3>
+                        <p><strong>desde Diciembre de 2023</strong></p>
+                        <p>Ayudo con el entrenamiento de múltiples IA, obteniendo un salario consistente por el trabajo.
+                        Recibió múltiples proyectos bien remunerados debido a competitividad personal.</p></figcaption>
+                </figure>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

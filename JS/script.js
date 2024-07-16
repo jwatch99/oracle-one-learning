@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Must add manually files due to still being new to web development and GitHub limitations
     const jsFiles = [
-        "helloworld.js"
+        "helloworld.js",
+        "variables_1.js",
+        "variables_2.js",
+        "variables_3.js",
+        "variables_string-w-brackets.js",
+        "variables_arrays.js"
     ];
 
     const jsFilesDropdown = document.getElementById("js-files");
@@ -22,6 +27,7 @@ function loadJSFile() {
         .then(response => response.text())
         .then(code => {
             editorArea.value = code;
+            autoResize(editorArea);
         })
         .catch(error => {
             console.error('Error loading file:', error);
@@ -39,4 +45,10 @@ function executeCode() {
     } catch (error) {
         outputArea.value = `Error: ${error.message}`;
     }
+    autoResize(editorArea);
+    
+}
+function autoResize(textarea) {
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight + 'px';
 }

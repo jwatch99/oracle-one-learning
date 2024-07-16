@@ -1,0 +1,420 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #EDE8F5; 
+    min-width: 600px; 
+}
+
+/* Estilos para el header */
+header {
+    width: 100%;
+    background-color: #1E3A5F; /* Dark blue */
+    color: #EDE8F5; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    display: flex;  
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+header nav ul li a {
+    color: #EDE8F5; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #4A90E2; /* Light blue */
+}
+
+/* Estilos para el footer */
+footer {
+    width: 100%;
+    background-color: #1E3A5F; /* Dark blue */
+    color: #EDE8F5; 
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos para la introducción */
+#introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1E3A5F;
+    background-color: #D9EFFF;
+    margin-top: 62px; /* Ajuste para el header fijo */
+}
+
+.intro-text {
+    width: 50%;
+}
+
+.intro-photo {
+    width: 50%;
+}
+
+.intro-photo img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.contact-links a {
+    margin-right: 1em;
+    color: #1E3A5F; /* Dark blue */
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: #4A90E2; /* Light blue */
+}
+
+/* Estilos para las secciones */
+section {
+    padding: 5% 10%;
+}
+
+#about {
+    background-color: #274A7F; /* Medium dark blue */
+    color: #EDE8F5; 
+}
+
+#skills, #hobbies, #education {
+    background-color: #D9EFFF; 
+    color: #1E3A5F; /* Dark blue */
+}
+
+#portfolio {
+    background-color: #4A90E2; /* Light blue */
+    color: #EDE8F5; 
+}
+
+#experience {
+    background-color: #274A7F; /* Medium dark blue */
+    color: #EDE8F5; 
+}
+
+#contact {
+    background-color: #D9EFFF; 
+    color: #1E3A5F; /* Dark blue */
+    margin-bottom: 62px; /* Ajuste para el header fijo */
+}
+
+/* Estilos para las cajas */
+.skills-container, .hobbies-container, .education-container, .experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill, .hobby, .education-item {
+    background-color: #4A90E2; /* Light blue */
+    color: #EDE8F5; 
+    padding: 1em;
+    margin: 1em;
+    max-width: 350px;
+    min-width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 30%;
+    transition: transform 0.3s;
+}
+
+.education-item img {
+    height: 200px;
+    max-width: 100%;
+}
+
+.skill:hover, .hobby:hover, .education-item:hover, .experience-item:hover {
+    transform: scale(1.05);
+}
+
+.skill img {
+    height: 1em;
+}
+
+/* Estilos para las tarjetas del portafolio */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-width: 200px;
+}
+
+.portfolio-item {
+    background-color: #D9EFFF; 
+    color: #1E3A5F; /* Dark blue */
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 30%;
+    max-width: 1000px;
+    min-width: 320px;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para el formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5em;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input, form textarea {
+    background-color: #4A90E2; /* Light blue */
+    color: #EDE8F5; 
+}
+
+form button {
+    background-color: #1E3A5F; /* Dark blue */
+    color: #EDE8F5; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #4A90E2; /* Light blue */
+}
+
+/* Estilos para los encabezados */
+h1, h2 {
+    margin-top: 0;
+}
+
+/* Estilos de animación para hipervínculos */
+a {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #4A90E2; /* Light blue */
+    transition: width 0.3s ease, right 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+    right: 0;
+}
+
+a:hover {
+    color: #4A90E2; /* Light blue */
+}
+
+/* Estilos para las presentaciones de portafolio */
+.display_left, .display_right {
+    display: block;
+}
+
+.display_left {
+    float: left;
+}
+
+.display_right {
+    float: right;
+}
+
+.display_button_container {
+    padding: 10px 0 0 0;
+}
+
+.slide {
+    display: none; 
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-color: #4A90E2;
+    background-color: #4A90E2;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    transition: opacity 2s ease-in;
+}
+
+.slide.visible {
+    opacity: 1;
+}
+
+.slide_text {
+    width: 17.5%;
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    color: #EDE8F5;
+    font-size: small;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.slide_img {
+    padding: 5%;
+    padding-left: 0%;
+    width: 75%;
+}
+
+/* Experiencia */
+figure {
+    display: grid;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: #1E3A5F;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+figure > * {
+    grid-area: 1/1;
+    transition: .4s;
+}
+
+figure figcaption {
+    display: inline-block;
+    align-items: end;
+    font-family: sans-serif;
+    font-size: 1rem;
+
+    text-shadow: 0 0 2px black;
+    max-width: calc(400px - 1.5rem);
+    
+    overflow-wrap: break-word;
+
+    color: white;
+    padding: 1.25rem;
+    background: var(--c,#0009);
+    clip-path: inset(0 var(--_i,100%) 0 0);
+   /*
+    -webkit-mask:
+      linear-gradient(#000 0 0),
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    -webkit-mask-clip: text, padding-box;
+   */
+    margin: -10px;
+    margin-left: -10px;
+}
+
+figure:hover figcaption {
+    --_i: -00%;
+}
+figure img{
+    height: 100%;
+    max-width: 400px;
+}
+figure:hover img {
+    transform: scale(1.2);
+}
+
+@supports not (-webkit-mask-clip: text) {
+    figure figcaption {
+     -webkit-mask: none;
+     color: #fff;
+    }
+}
+/* CSS */
+.button-6 {
+  align-items: center;
+  background-color: #405cf5;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 90%;
+}
+
+.button-6.alt{
+    background-color: #fff;
+    color: #405cf5;
+}
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
