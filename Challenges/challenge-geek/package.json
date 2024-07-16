@@ -1,0 +1,14 @@
+{
+    "name": "json-server-vercel",
+    "version": "1.0.0",
+    "description": "A JSON server deployed on Vercel with an index.html",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "vercel-build": "echo 'Nothing to build'"
+    },
+    "dependencies": {
+      "json-server": "^0.17.0"
+    }
+  }
+  

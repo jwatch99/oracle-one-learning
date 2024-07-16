@@ -1,11 +1,12 @@
 import { validateForm } from './formValidation.js';
-import { renderProducts, addProduct, deleteProduct } from './productRender.js';
+import { renderProducts, addProductToDOM, removeProductFromDOM } from './productRender.js';
+import { getProducts, addProduct } from './api.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const form = document.getElementById('add-product-form');
     const productsContainer = document.getElementById('products-container');
 
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
         if (validateForm(form)) {
             const product = {
@@ -13,7 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 price: form['product-price'].value,
                 imageUrl: form['product-image-url'].value
             };
-            addProduct(product);
+            const newProduct = await addProduct(product);
+            if (newProduct) {
+                addProductToDOM(newProduct);
+            }
             form.reset();
         }
     });
@@ -21,9 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     productsContainer.addEventListener('click', (event) => {
         if (event.target.classList.contains('delete-btn')) {
             const productId = event.target.dataset.productId;
-            deleteProduct(productId);
+            removeProductFromDOM(productId);
         }
     });
 
-    renderProducts();
+    const products = await getProducts();
+    renderProducts(products);
 });

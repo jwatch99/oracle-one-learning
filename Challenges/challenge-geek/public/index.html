@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Geek</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Usando FontAwesome -->
+    <script src="https://kit.fontawesome.com/4046a61b0e.js" crossorigin="anonymous"></script>
+    <!-- Usando Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <img src="Logo.svg" alt="Alura Geek Logo">
+    </header>
+    <main>
+        <section id="product-form">
+            <h2>Añadir Producto Geek</h2>
+            <form id="add-product-form">
+                <label for="product-name">Nombre del Producto:</label>
+                <input type="text" id="product-name" name="product-name" required>
+                
+                <label for="product-price">Precio:</label>
+                <input type="text" id="product-price" name="product-price" required>
+                
+                <label for="product-image-url">URL de la Imagen:</label>
+                <input type="url" id="product-image-url" name="product-image-url" required>
+                
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </form>
+        </section>
+        <section id="product-list">
+            <h2>Productos Geek</h2>
+            <div id="products-container"></div>
+        </section>
+    </main>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
