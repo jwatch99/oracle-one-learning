@@ -1,0 +1,19 @@
+.video-list {
+    padding: 20px;
+    color: white;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+    background-color: #282c34; /* Negro */
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .section h3 {
+    background-color: #4b0082; /* Morado oscuro */
+    padding: 10px;
+    border-radius: 4px;
+    margin: 0;
+  }
+  
